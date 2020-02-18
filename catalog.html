@@ -3,43 +3,52 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <div>
-        <a href="index.html">
-          <img src="img/logo-tehnomart-up.png" width="109" height="19" alt="Логотип Техномарт">
-        </a>
-        <form action="https://echo.htmlacademy.ru/courses" method="post">
-          <input type="search" name="search" id="search-field" placeholder="Поиск:">
-        </form>
-        <a href="#">Закладки: 0</a>
-        <a href="#">Корзина: 10</a>
-        <a href="#">Оформить заказ</a>
-      </div>
+      <div class="header">
+        <div class="header-top">
+          <div class="logo header-logo">
+            <a href="index.html">
+              <img src="img/logo-tehnomart-up.png" width="109" height="19" alt="Логотип Техномарт">
+            </a>
+          </div>  
+          <form action="https://echo.htmlacademy.ru/courses" method="post">
+            <input type="search" name="search" id="search-field" placeholder="Поиск:">
+          </form>
+          <a href="#">Закладки: 0</a>
+          <a href="#">Корзина: 10</a>
+          <a href="#" class="link-order">Оформить заказ</a>
+        </div>
 
-      <div>
-        <p>Интернет-магазин<br>
-           строительных материалов<br>
-           и инструментов для ремонта</p>
-        <p>+78125550555</p>
-        <p>г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
-        <a href="#">Равшан Джамшутович</a>
-        <a href="#">Мои заказы</a>
-        <a href="#">Личный кабинет</a> 
-      </div>
+        <div class="header-middle">
+          <p class="title">Интернет-магазин<br>
+            строительных материалов<br>
+            и инструментов для ремонта</p>
+          <div class="contacts">   
+            <p class="contacts-phone">+78125550555</p>
+            <p class="contacts-adress">г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
+          </div>
+          <a class="user-name" href="#">Равшан Джамшутович</a>
+          <a class="user-orders" href="#">Мои заказы</a>
+          <a class="user-profile" href="#">Личный кабинет</a> 
+        </div>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="">Компания</a></li>
-          <li><a href="">Каталог</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Спецпредложения</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
-        </ul>
-      </nav>
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Компания</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div> 
     </header>
 
     <main>
@@ -63,35 +72,35 @@
           <h3>Производители:</h3>
           <ul>
             <li>
-              <input type="checkbox" name="Bosh" id="check-1">
-              <label for="check-1">Bosh</label>
+              <input type="checkbox" name="Bosh" id="check-bosh">
+              <label for="check-bosh">Bosh</label>
             </li>
             <li>
-              <input type="checkbox" name="Interskol" id="check-2">
-              <label for="check-2">Интрерскол</label>
+              <input type="checkbox" name="Interskol" id="check-interskol">
+              <label for="check-interskol">Интрерскол</label>
             </li>
             <li>
-              <input type="checkbox" name="Makita" id="check-3">
-              <label for="check-3">Makita</label>
+              <input type="checkbox" name="Makita" id="check-makita">
+              <label for="check-makita">Makita</label>
             </li>
             <li>
-              <input type="checkbox" name="Dewalt" id="check-4">
-              <label for="check-4">Dewalt</label>
+              <input type="checkbox" name="Dewalt" id="check-dewalt">
+              <label for="check-dewalt">Dewalt</label>
             </li>
             <li>
-              <input type="checkbox" name="Hitachi" id="check-5">
-              <label for="check-5">Hitachi</label>
+              <input type="checkbox" name="Hitachi" id="check-hitachi">
+              <label for="check-hitachi">Hitachi</label>
             </li>
           </ul>
           <h3>Питание:</h3>
           <ul>
             <li>
-              <input type="radio" name="supply-type" id="radio-1" value="Аккумуляторные"> 
-              <label for="radio-1">Аккумуляторные</label>
+              <input type="radio" name="supply-type" id="radio-recharge" value="Аккумуляторные"> 
+              <label for="radio-recharge">Аккумуляторные</label>
             </li>
             <li>
-              <input type="radio" name="supply-type" id="radio-2" value="Сетевые"> 
-              <label for="radio-2">Сетевые</label>
+              <input type="radio" name="supply-type" id="radio-nonrecharge" value="Сетевые"> 
+              <label for="radio-nonrecharge">Сетевые</label>
             </li>
           </ul>
           <button type="submit">Показать</button>

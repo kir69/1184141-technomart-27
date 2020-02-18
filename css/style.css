@@ -1,0 +1,151 @@
+/*общие*/
+
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'PT-Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}    
+
+/*хэдер*/
+
+.header a {
+    color: #ffffff;
+}
+
+.header{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+
+    background-color: #f4f7f9;
+
+}
+
+.header-top{
+    background-color: #293449; 
+}
+
+
+.logo {
+    background-color: #ee3643;
+}
+
+.link-order {
+    background-color: #63a63e;   
+}
+
+.title {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 23px;
+    color: #ee3643; 
+}
+
+.contacts-phone{
+    font-size: 21px;
+    line-height: 21px;
+    color: #ee3643;
+}
+
+.contacts-adress{
+    font-size: 14px;
+    line-height: 14px;
+    color: #32425c;
+}
+
+.user{
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000; 
+}
+
+.header-middle .user-name{
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000; 
+}
+
+.header-middle .user-orders,
+.header-middle .user-profile {
+    font-size: 16px;
+    line-height: 18px;
+    color: #32425c;
+    text-decoration: underline;
+}
+
+.main-navigation{
+    font-size: 17px;
+    line-height: 17px;
+    
+    background-color: #32425c;
+}
+
+/*основная часть*/
+
+.about-company,
+.map{
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+} 
+
+.title-technomart,
+.title-contacts{
+    font-size: 30px;
+    line-height: 30px; 
+}
+
+.about-company p {
+    font-family: 'PT-Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}  
+
+.delivery-items {
+    list-style: none;
+}
+
+.link-company,
+.btn-feedback {
+    font-size: 14px;
+    line-height: 18px;  
+    color: #ffffff;
+
+    background-color: #ee3643;
+}
+
+.map p{
+    font-family: 'PT-Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px; 
+}
+
+/*футер*/
+
+.footer {
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #f1f5f7;
+
+    background-color: #32425c;
+}
