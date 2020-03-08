@@ -299,6 +299,8 @@ a {
 }  
 
 .delivery-items {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -440,8 +442,15 @@ map {
 
 /*футер*/
 
+.footer-tehnomart {
+    display: flex;
+    flex-direction: column;
+}
 
 .footer-top {
+  
+    width: 1200px;
+    padding-bottom: 53px;
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -449,25 +458,59 @@ map {
     background-color: #32425c;
 }
 
+.footer-top-wrapper-logo {
+    display: flex;
+    min-height: 68px;
+    
+}
+
+.logo-footer {
+    width: 220px;
+    height: 68pх;
+    margin-right: 173px;
+}
+
 .footer-menu,
 .footer-list,
 .social-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+.footer-menu li,
+.footer-list li {
+    margin-left: 60px;   
+}
+
+.footer-menu li:first-child,
+.footer-list li:first-child {
+    margin-left: 0;
 }
 
 .footer-menu a {
     color: #f1f5f7;
 }
 
+.footer-top-wrapper-adress {
+    display: flex;
+    margin-top: 32px;
+}
+
 .footer-adress {
+    width: 322px;
+    margin-right: 91px;
     color: #f3f7f9;
 }
+
 
 .footer-list a {
     color: #ffd180;
 }
 
 .footer-bottom {
+    min-height: 107px;
     font-family: 'Cuprum', Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
@@ -476,12 +519,46 @@ map {
     background-color: #293449;
 }
 
+.footer-bottom .container {
+    display: flex;
+    margin-top: 39px;
+    margin-bottom: 35px;
+    
+}
+
+.copyright {
+    width: 228px;
+    min-height: 33px;
+}
+
+.social-list {
+    width: 150px;
+    margin-left: 161px;
+    margin-right: 119px;
+}
+
 .social-item {
     width: 42px;
     height: 42px;
+    margin-left: 3px;
     border-radius: 50%;
 
     background-color: #212a3a;
+}
+
+.social-item:first-child {
+    margin-left: 0;
+}
+
+.footer-feedback {
+    width: 135px;
+    min-height: 32px;
+    margin-right: 53px;
+}
+
+.footer-developed {
+    width: 96px;
+    min-height: 34px;
 }
 
 .footer-feedback a,
