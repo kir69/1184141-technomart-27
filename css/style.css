@@ -50,10 +50,11 @@ a {
 
 .header-top {
     display: flex;
-    justify-content: center;
-    min-height: 42px;
-    width: 1200px;
     
+    justify-content: center;
+    position: relative;
+    width: 1200px;
+    height: 42px;
     background-color: #293449; 
 }
 
@@ -61,12 +62,14 @@ a {
 
 
 .logo {
-    width: 220px;
-    min-height: 42px;
-    
     background-color: #ee3643;
     box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
 }
+
+.header-logo {
+    height: 47px;
+}
+
 
 .header-logo:hover {
     background-color: #ca2c37;
@@ -76,29 +79,152 @@ a {
     background-color: #ba2732;
 }
 
+
+.search-form {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 17px;
+    top: 12px;
+    opacity: 0.3;
+}
+
+.search-icon:hover {
+    opacity: 1;
+}
+
+
 .search-form input {
     width: 270px;
-    min-height: 42px;
-
+    height: 42px;
+    padding: 0;
+    padding-left: 49px;
+   
+    border: none;
+    
     background-color: #293449;
+    
+}
+
+.search-form input:hover + .search-icon {
+    opacity: 1;
+    
 }
 
 .search-form input:hover {
     background-color: #212a3a;
 }
 
-.search-form input:focus {
-    background-color: #ffffff
+.search-form input:focus + .search-icon path {
+    fill: #ee3643;
 }
+
+.search-form input:focus{
+    background-color: #ffffff;
+}
+
+.search-form input::-webkit-input-placeholder {
+    color: #ffffff;
+    
+  }
+
+.search-form input::-moz-placeholder,
+.search-form input:-moz-placeholder {
+    color: #ffffff;
+}
+
+.search-form input:-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.search-form input::-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.header-top a {
+    display: block;
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.header-top a:first-child {
+    display: block;
+    position: relative;
+    padding-top: 13px;
+    padding-right: 56px;
+    padding-bottom: 15px;
+    padding-left: 55px;
+}
+
 
 .bookmarks {
-    width: 150px;
-    min-height: 42px;
+    
+    
+    padding-right: 28px;
+    
+    padding-left: 44px;
 }
 
+
+
+.bookmarks::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 12px;
+    width: 14px;
+    height: 16px;
+    background-image: url("../img/icon-bookmark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+
+
 .basket {
-    width: 150px;
-    min-height: 42px;
+    
+    padding-left: 50px;
+    padding-right: 31px;
+}
+
+.basket::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.bookmarks:hover::before,
+.basket:hover::before {
+    
+    opacity: 1;
+}
+
+.bookmarks:hover,
+.basket:hover {
+    background-color: #212a3a;
+    
+}
+
+.bookmarks:active::before,
+.basket:active::before {   
+    opacity: 0.5;
+}
+
+.bookmarks:active,
+.basket:active {
+    background-color: #161d29;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .basket-drop {
@@ -106,20 +232,10 @@ a {
     background-color: #ee3643;
 }
 
-.bookmarks:hover,
-.basket:hover {
-    background-color: #212a3a;
-}
-
-.bookmarks:active,
-.basket:active {
-    background-color: #161d29;
-}
-
 .link-order {
-    width: 150px;
-    min-height: 42px;
-
+    padding-left: 20px;
+    padding-right: 22px;
+    
     background-color: #63a63e;   
 }
 
@@ -129,18 +245,21 @@ a {
 
 .link-order:active {
     background-color: #518534;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .header-middle {
     display: flex;
     justify-content: flex-end;
-    margin-top: 54px;
+    margin-top: 46px;
 }
+
+
 
 .title {
     width: 197px;
     margin: 0;
-    
+    margin-top: 3px;
     font-style: italic;
     font-size: 16px;
     line-height: 23px;
@@ -150,15 +269,24 @@ a {
 .contacts {
     width: 270px;
     margin-left: 70px;
+    
+    margin-bottom: 8px;
 }
 
 .contacts-phone {
-    min-height: 45px;
+    
     margin: 0;
     
+    
+    padding-top: 10px;
+    padding-right: 49px;
+    padding-left: 71px;
+    padding-bottom: 8px;
+
     font-size: 21px;
     line-height: 21px;
     color: #ee3643;
+    border: solid 3px #ffffff;
 }
 
 .contacts-adress {
@@ -168,16 +296,15 @@ a {
     margin-top: 10px;
     
     font-size: 14px;
-    line-height: 14px;
+    line-height: 24px;
     color: #32425c;
 }
 
 .user {
-    min-height: 45px;
+    position: relative;
     margin-left: 69px;
     
-    font-size: 21px;
-    line-height: 21px;
+    
     color: #000000; 
 }
 
@@ -185,22 +312,49 @@ a {
     margin-left: 51px;
 }
 
+.icon-login {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+}
+
+
+.btn-enter:hover + .icon-login path {
+    fill: #32425C;
+}
+
+.btn-enter:focus + .icon-login path {
+    fill: #c5c5c5;
+}
+
 .btn-enter,
 .btn-reg {
+    font-size: 21px;
+    line-height: 21px;
+
     background-color: #ffffff;
 }
 
 .btn-reg {
     width: 150px;
-    min-height: 45px;
-    margin-left: 10px;
+    margin-left: 8px;
+    padding-top: 13px;
+    padding-bottom: 11px;
+
+    border: none;
 }
 
 .btn-enter {
+    position: relative;
     width: 121px;
-    min-height: 45px;
-}
+    padding: 0;
+    padding-top: 14px;
+    padding-bottom: 11px;
+    padding-left: 48px ;
+    padding-right: 27px;
 
+    border: none;
+}
 .btn-enter:hover,
 .btn-reg:hover {
     color: #ee3643;
@@ -224,14 +378,24 @@ a {
 
 .list-navigation{
     display: flex;
-    justify-content: space-evenly;
-    min-height: 60px;
+   
     margin: 0;
     padding: 0;
     
     list-style: none;
 }
 
+.list-navigation a {
+    display: block;
+    padding-top: 22px;
+    padding-right: 31px;
+    padding-bottom: 26px;
+    padding-left: 31px;
+}
+
+.list-navigation a:first-child {
+    padding-left: 52px;
+}
 .list-navigation a:hover {
     background-color: #32425c;
 }
